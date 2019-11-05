@@ -1,13 +1,13 @@
 export default function() {
   return [
     {
-      title: "Blog Dashboard",
+      title: "Teachers",
       to: "/blog-overview",
       htmlBefore: '<i class="material-icons">edit</i>',
       htmlAfter: ""
     },
     {
-      title: "Blog Posts",
+      title: "Chats",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
       to: "/blog-posts",
     },

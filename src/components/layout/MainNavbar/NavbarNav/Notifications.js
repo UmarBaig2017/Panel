@@ -28,7 +28,7 @@ export default class Notifications extends React.Component {
           <div className="nav-link-icon__wrapper">
             <i className="material-icons">&#xE7F4;</i>
             <Badge pill theme="danger">
-              2
+              3
             </Badge>
           </div>
         </NavLink>
