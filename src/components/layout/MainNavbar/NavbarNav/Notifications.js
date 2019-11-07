@@ -1,6 +1,6 @@
 import React from "react";
 import { NavItem, NavLink, Badge, Collapse, DropdownItem } from "shards-react";
-
+import { Row, Col, Button } from "shards-react";
 export default class Notifications extends React.Component {
   constructor(props) {
     super(props);
@@ -21,16 +21,11 @@ export default class Notifications extends React.Component {
   render() {
     return (
       <NavItem className="border-right dropdown notifications">
-        <NavLink
+       <NavLink
           className="nav-link-icon text-center"
           onClick={this.toggleNotifications}
         >
-          <div className="nav-link-icon__wrapper">
-            <i className="material-icons">&#xE7F4;</i>
-            <Badge pill theme="danger">
-              3
-            </Badge>
-          </div>
+        <span className="d-none d-md-inline-block"><b>Switch to Teacher's Portal </b></span>
         </NavLink>
         <Collapse
           open={this.state.visible}
@@ -69,7 +64,9 @@ export default class Notifications extends React.Component {
           <DropdownItem className="notification__all text-center">
             View all Notifications
           </DropdownItem>
-        </Collapse>
+      </Collapse>
+   
+
       </NavItem>
     );
   }

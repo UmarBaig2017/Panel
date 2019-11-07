@@ -121,6 +121,65 @@ class BlogPosts extends React.Component {
           body:
             "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
           date: "29 February 2019"
+        },
+        {
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title:
+            "Instantly gentleman contained belonging exquisite now direction",
+          body:
+            "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
+          date: "29 February 2019"
+        }
+        ,
+        {
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title:
+            "Instantly gentleman contained belonging exquisite now direction",
+          body:
+            "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
+          date: "29 February 2019"
+        }
+        ,
+        {
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title:
+            "Instantly gentleman contained belonging exquisite now direction",
+          body:
+            "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
+          date: "29 February 2019"
+        }
+        ,
+        {
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title:
+            "Instantly gentleman contained belonging exquisite now direction",
+          body:
+            "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
+          date: "29 February 2019"
+        }
+        ,
+        {
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title:
+            "Instantly gentleman contained belonging exquisite now direction",
+          body:
+            "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
+          date: "29 February 2019"
+        }
+        ,
+        {
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title:
+            "Instantly gentleman contained belonging exquisite now direction",
+          body:
+            "West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...",
+          date: "29 February 2019"
         }
       ],
 
@@ -186,10 +245,44 @@ class BlogPosts extends React.Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Blog Posts" subtitle="Components" className="text-sm-left" />
+          <PageTitle sm="4" title="Teachers"  className="text-sm-left" />
         </Row>
+        <Row>
+        {PostsListThree.map((post, idx) => (
+          <Col lg="4" key={idx}>
+            <Card small className="card-post mb-4">
+              <CardBody>
+                <h5 className="card-title">{post.title}</h5>
+                <p className="card-text text-muted">{post.body}</p>
+              </CardBody>
+              <CardFooter className="border-top d-flex">
+                <div className="card-post__author d-flex">
+                  <a
+                    href="#"
+                    className="card-post__author-avatar card-post__author-avatar--small"
+                    style={{ backgroundImage: `url('${post.authorAvatar}')` }}
+                  >
+                    Written by James Khan
+                  </a>
+                  <div className="d-flex flex-column justify-content-center ml-3">
+                    <span className="card-post__author-name">
+                      {post.author}
+                    </span>
+                    <small className="text-muted">{post.date}</small>
+                  </div>
+                </div>
+                <div className="my-auto ml-auto">
+                  <Button size="sm" theme="white">
+                    <i className="far fa-bookmark mr-1" /> Chat
+                  </Button>
+                </div>
+              </CardFooter>
+            </Card>
+          </Col>
+        ))}
+      </Row>
 
-        {/* First Row of Posts */}
+        {/* First Row of Posts*/}
         <Row>
           {PostsListOne.map((post, idx) => (
             <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>
@@ -227,7 +320,7 @@ class BlogPosts extends React.Component {
             </Col>
           ))}
         </Row>
-
+ 
         {/* Second Row of Posts */}
         <Row>
           {PostsListTwo.map((post, idx) => (
@@ -268,40 +361,7 @@ class BlogPosts extends React.Component {
         </Row>
 
         {/* Third Row of Posts */}
-        <Row>
-          {PostsListThree.map((post, idx) => (
-            <Col lg="4" key={idx}>
-              <Card small className="card-post mb-4">
-                <CardBody>
-                  <h5 className="card-title">{post.title}</h5>
-                  <p className="card-text text-muted">{post.body}</p>
-                </CardBody>
-                <CardFooter className="border-top d-flex">
-                  <div className="card-post__author d-flex">
-                    <a
-                      href="#"
-                      className="card-post__author-avatar card-post__author-avatar--small"
-                      style={{ backgroundImage: `url('${post.authorAvatar}')` }}
-                    >
-                      Written by James Khan
-                    </a>
-                    <div className="d-flex flex-column justify-content-center ml-3">
-                      <span className="card-post__author-name">
-                        {post.author}
-                      </span>
-                      <small className="text-muted">{post.date}</small>
-                    </div>
-                  </div>
-                  <div className="my-auto ml-auto">
-                    <Button size="sm" theme="white">
-                      <i className="far fa-bookmark mr-1" /> Bookmark
-                    </Button>
-                  </div>
-                </CardFooter>
-              </Card>
-            </Col>
-          ))}
-        </Row>
+    
 
         {/* Fourth Row of posts */}
         <Row>

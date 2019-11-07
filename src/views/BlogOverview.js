@@ -14,7 +14,7 @@ const BlogOverview = ({ smallStats }) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
-      <PageTitle title="Blog Overview" subtitle="Dashboard" className="text-sm-left mb-3" />
+      <PageTitle  subtitle="Dashboard" className="text-sm-left mb-3" />
     </Row>
 
     {/* Small Stats Blocks */}
@@ -75,9 +75,9 @@ BlogOverview.propTypes = {
 BlogOverview.defaultProps = {
   smallStats: [
     {
-      label: "Posts",
-      value: "2,390",
-      percentage: "4.7%",
+      label: "Teachers",
+      value: "230",
+      percentage: "68.7%",
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
@@ -93,7 +93,7 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Pages",
+      label: "Students",
       value: "182",
       percentage: "12.4",
       increase: true,
@@ -111,11 +111,11 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "Comments",
-      value: "8,147",
-      percentage: "3.8%",
-      increase: false,
-      decrease: true,
+      label: "Subjects",
+      value: "1245",
+      percentage: "89.8%",
+      increase: true,
+      decrease: false,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "4", sm: "6" },
       datasets: [
@@ -130,11 +130,11 @@ BlogOverview.defaultProps = {
       ]
     },
     {
-      label: "New Customers",
-      value: "29",
-      percentage: "2.71%",
-      increase: false,
-      decrease: true,
+      label: "Chats",
+      value: "1598",
+      percentage: "101.4%",
+      increase: true,
+      decrease: false,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "4", sm: "6" },
       datasets: [
@@ -148,25 +148,7 @@ BlogOverview.defaultProps = {
         }
       ]
     },
-    {
-      label: "Subscribers",
-      value: "17,281",
-      percentage: "2.4%",
-      increase: false,
-      decrease: true,
-      chartLabels: [null, null, null, null, null, null, null],
-      attrs: { md: "4", sm: "6" },
-      datasets: [
-        {
-          label: "Today",
-          fill: "start",
-          borderWidth: 1.5,
-          backgroundColor: "rgb(0,123,255,0.1)",
-          borderColor: "rgb(0,123,255)",
-          data: [3, 2, 3, 2, 4, 5, 4]
-        }
-      ]
-    }
+ 
   ]
 };
 

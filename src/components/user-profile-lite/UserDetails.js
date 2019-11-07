@@ -22,13 +22,13 @@ const UserDetails = ({ userDetails }) => (
       </div>
       <h4 className="mb-0">{userDetails.name}</h4>
       <span className="text-muted d-block mb-2">{userDetails.jobTitle}</span>
-      <Button pill outline size="sm" className="mb-2">
+     {/* <Button pill outline size="sm" className="mb-2">
         <i className="material-icons mr-1">person_add</i> Follow
-      </Button>
+</Button>*/}
     </CardHeader>
     <ListGroup flush>
-      <ListGroupItem className="px-4">
-        <div className="progress-wrapper">
+      {/* <ListGroupItem className="px-4">
+       <div className="progress-wrapper">
           <strong className="text-muted d-block mb-2">
             {userDetails.performanceReportTitle}
           </strong>
@@ -40,8 +40,8 @@ const UserDetails = ({ userDetails }) => (
               {userDetails.performanceReportValue}%
             </span>
           </Progress>
-        </div>
-      </ListGroupItem>
+</div>
+</ListGroupItem>*/}
       <ListGroupItem className="p-4">
         <strong className="text-muted d-block mb-2">
           {userDetails.metaTitle}
@@ -61,9 +61,9 @@ UserDetails.propTypes = {
 
 UserDetails.defaultProps = {
   userDetails: {
-    name: "Sierra Brooks",
-    avatar: require("./../../images/avatars/0.jpg"),
-    jobTitle: "Project Manager",
+    name: "Umar Baig",
+    avatar: "https://scontent-sin2-1.cdninstagram.com/vp/5c79bc6b72045b86798854f4f26f67d5/5E429BBB/t51.2885-19/s150x150/53396441_367497184097338_483845318778028032_n.jpg?_nc_ht=scontent-sin2-1.cdninstagram.com",
+    jobTitle: "10th Grade",
     performanceReportTitle: "Workload",
     performanceReportValue: 74,
     metaTitle: "Description",
