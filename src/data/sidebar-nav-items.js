@@ -3,17 +3,17 @@ export default function() {
     {
       title: "Dashboard",
       to: "/blog-overview",
-      htmlBefore: '<i class="material-icons">edit</i>',
+      htmlBefore: '<i class="material-icons">dashboard</i>',
       htmlAfter: ""
     },
     {
       title: "Teachers",
-      htmlBefore: '<i class="material-icons">vertical_split</i>',
+      htmlBefore: '<i class="material-icons">school</i>',
       to: "/blog-posts",
     },
     {
       title: "Chats",
-      htmlBefore: '<i class="material-icons">note_add</i>',
+      htmlBefore: '<i class="material-icons">chat_bubble</i>',
       to: "/add-new-post",
     },
     {
@@ -32,8 +32,8 @@ export default function() {
     //   to: "/user-profile-lite",
     // },
     {
-      title: "Errors",
-      htmlBefore: '<i class="material-icons">error</i>',
+      title: "Switch to Teachers Portal",
+      htmlBefore: '<i class="material-icons">swap_horiz</i>',
       to: "/errors",
     }
   ];

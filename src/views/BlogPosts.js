@@ -272,9 +272,9 @@ class BlogPosts extends React.Component {
                   </div>
                 </div>
                 <div className="my-auto ml-auto">
-                  <Button size="sm" theme="white">
-                    <i className="far fa-bookmark mr-1" /> Chat
-                  </Button>
+                <Button theme="info" className="mb-2 mr-1">
+               Message to {post.author}
+              </Button>
                 </div>
               </CardFooter>
             </Card>
@@ -400,5 +400,6 @@ class BlogPosts extends React.Component {
     );
   }
 }
+
 
 export default BlogPosts;

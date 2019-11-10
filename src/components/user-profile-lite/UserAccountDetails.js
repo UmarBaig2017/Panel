@@ -12,7 +12,11 @@ import {
   FormInput,
   FormSelect,
   FormTextarea,
-  Button
+  Button,
+  FormRadio,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText
 } from "shards-react";
 
 const UserAccountDetails = ({ title }) => (
@@ -55,7 +59,7 @@ const UserAccountDetails = ({ title }) => (
                     type="email"
                     id="feEmail"
                     placeholder="Email Address"
-                    value="sierra@example.com"
+                    value="xyz@gmail.com"
                     onChange={() => {}}
                     autoComplete="email"
                   />
@@ -73,24 +77,35 @@ const UserAccountDetails = ({ title }) => (
                   />
                 </Col>
               </Row>
-              <FormGroup>
-                <label htmlFor="feAddress">Address</label>
-                <FormInput
-                  id="feAddress"
-                  placeholder="Address"
-                  value="1234 Main St."
-                  onChange={() => {}}
-                />
-              </FormGroup>
+              <Row form>
+              <Col md="6" className="form-group">
+              <label htmlFor="feGander">Gander</label>
+              <fieldset>
+              <FormRadio  >Male</FormRadio>
+              <FormRadio >female</FormRadio>
+              <FormRadio >Other</FormRadio>
+              
+            </fieldset>
+            </Col>
+            <Col md="3" className="form-group">
+            <InputGroup className="mb-3">
+            <FormInput value="10" onChange={() => {}} />
+            <InputGroupAddon type="append">
+              <InputGroupText>$/hr</InputGroupText>
+            </InputGroupAddon>
+          </InputGroup>
+          </Col>
+
+            
+            </Row>
               <Row form>
                 {/* City */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="feCity">City</label>
-                  <FormInput
-                    id="feCity"
-                    placeholder="City"
-                    onChange={() => {}}
-                  />
+                  <label htmlFor="feExam">Exam</label>
+                  <FormSelect id="feInputState">
+                    <option>Choose...</option>
+                    <option>...</option>
+                  </FormSelect>
                 </Col>
                 {/* State */}
                 <Col md="4" className="form-group">
@@ -134,7 +149,7 @@ UserAccountDetails.propTypes = {
 };
 
 UserAccountDetails.defaultProps = {
-  title: "Account Details"
+  title: "User Details"
 };
 
 export default UserAccountDetails;
