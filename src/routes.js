@@ -8,7 +8,7 @@ import SigupLayout from "./layouts/SigupLayout";
 // Route Views
 import BlogOverview from "./views/BlogOverview";
 import UserProfileLite from "./views/UserProfileLite";
-import AddNewPost from "./views/AddNewPost";
+import AddNewPost from "./views/ChatStudent";
 import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";

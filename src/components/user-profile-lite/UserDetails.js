@@ -9,7 +9,9 @@ import {
   Progress
 } from "shards-react";
 
+
 const UserDetails = ({ userDetails }) => (
+  
   <Card small className="mb-4 pt-3">
     <CardHeader className="border-bottom text-center">
       <div className="mb-3 mx-auto">
