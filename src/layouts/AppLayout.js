@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col } from "shards-react";
 
-import MainNavbar from "../components/layout/MainNavbar/MainNavbar";
-// import MainNavbar from "../components/layout/MainNavbarTeacher/MainNavbar";
-import MainSidebar from "../components/layout/MainSidebar/MainSidebar";
-// import MainSidebar from "../components/layout/MainSidebarTeacher/MainSidebar";
+// import MainNavbar from "../components/layout/MainNavbar/MainNavbar";
+import MainNavbar from "../components/layout/MainNavbarTeacher/MainNavbar";
+// import MainSidebar from "../components/layout/MainSidebar/MainSidebar";
+import MainSidebar from "../components/layout/MainSidebarTeacher/MainSidebar";
 import MainFooter from "../components/layout/MainFooter";
 
-const DefaultLayout = ({ children, noNavbar, noFooter }) => (
+const AppLayout = ({ children, noNavbar, noFooter }) => (
   <Container fluid>
     <Row>
       <MainSidebar />
@@ -21,13 +21,13 @@ const DefaultLayout = ({ children, noNavbar, noFooter }) => (
       >
         {!noNavbar && <MainNavbar />}
         {children}
-      
+        {!noFooter && <MainFooter />}
       </Col>
     </Row>
   </Container>
 );
 
-DefaultLayout.propTypes = {
+AppLayout.propTypes = {
   /**
    * Whether to display the navbar, or not.
    */
@@ -38,9 +38,9 @@ DefaultLayout.propTypes = {
   noFooter: PropTypes.bool
 };
 
-DefaultLayout.defaultProps = {
+AppLayout.defaultProps = {
   noNavbar: false,
   noFooter: false
 };
 
-export default DefaultLayout;
+export default AppLayout;

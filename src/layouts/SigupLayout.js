@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Children } from "react";
 import PropTypes from "prop-types";
 import { Container, Row, Col } from "shards-react";
 
 
 
-const SigupLayout = () => (
+const SigupLayout = ({ children}) => (
   <Container fluid>
     <Row>
-    
+    {Children}
      
     </Row>
   </Container>

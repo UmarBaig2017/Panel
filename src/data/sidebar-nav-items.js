@@ -21,16 +21,7 @@ export default function() {
       htmlBefore: '<i class="material-icons">view_module</i>',
       to: "/user-profile-lite",
     },
-    // {
-    //   title: "Tables",
-    //   htmlBefore: '<i class="material-icons">table_chart</i>',
-    //   to: "/tables",
-    // },
-    // {
-    //   title: "User Profile",
-    //   htmlBefore: '<i class="material-icons">person</i>',
-    //   to: "/user-profile-lite",
-    // },
+ 
     {
       title: "Switch to Teachers Portal",
       htmlBefore: '<i class="material-icons">swap_horiz</i>',

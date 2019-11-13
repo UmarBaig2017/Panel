@@ -1,31 +1,52 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import routes from "./routes";
+import routes, { notAuthenticatedRoutes } from "./routes";
 import withTracker from "./withTracker";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./shards-dashboard/styles/shards-dashboards.1.1.0.min.css";
+import Signin from "./views/Signin";
 
-export default () => (
-  <Router basename={process.env.REACT_APP_BASENAME || ""}>
-    <div>
-      {routes.map((route, index) => {
-        return (
-          <Route
-            key={index}
-            path={route.path}
-            exact={route.exact}
-            component={withTracker(props => {
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isAuth: true };
+  }
+  render() {
+    return (
+      <Router basename={process.env.REACT_APP_BASENAME || ""}>
+        <div>
+          {!this.state.isAuth &&
+            notAuthenticatedRoutes.map((route, index) => {
               return (
-                <route.layout {...props}>
-                  <route.component {...props} />
-                </route.layout>
+                <React.Fragment key={index}>
+                  <Route exact path={route.path} component={route.component} />
+                </React.Fragment>
               );
             })}
-          />
-        );
-      })}
-    </div>
-  </Router>
-);
+          {this.state.isAuth &&
+            routes.map((route, index) => {
+              return (
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  component={withTracker(props => {
+                    return (
+                      <route.layout {...props}>
+                    
+                        <route.component {...props} />
+                      </route.layout>
+                    );
+                  })}
+                />
+              );
+            })}
+        </div>
+      </Router>
+    );
+  }
+}
+
+export default App;

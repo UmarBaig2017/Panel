@@ -3,7 +3,8 @@ import { Redirect } from "react-router-dom";
 
 // Layout Types
 import DefaultLayout from "./layouts/Default";
-import SigupLayout from "./layouts/SigupLayout";
+import AppLayout from "./layouts/AppLayout";
+
 
 // Route Views
 import BlogOverview from "./views/BlogOverview";
@@ -13,24 +14,39 @@ import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
 import BlogPosts from "./views/BlogPosts";
-import Sigin from "./views/Signin"
+import Signin from "./views/Signin";
+import Signup from "./views/Signup"
+
+import BasicDetails from "./views/BasicDetails"
+export const notAuthenticatedRoutes = [
+  { 
+    exact: true,
+    path: "/",
+    component: Signin
+  },
+  {
+    path: "/Signup",
+    component: Signup
+  },
+  {
+    path: "/Details",
+    component:""
+  }
+];
+
 
 export default [
+ 
+
   {
     path: "/",
-    layout: SigupLayout,
-    component: Sigin
+    exact: true,
+    layout: DefaultLayout,
+    component: () => <Redirect to="/blog-overview" />
   },
-
-  // {
-  //   path: "/",
-  //   exact: true,
-  //   layout: DefaultLayout,
-  //   component: () => <Redirect to="/blog-overview" />
-  // },
   {
     path: "/blog-overview",
-    layout: DefaultLayout,
+    layout: AppLayout,
     component: BlogOverview
   },
   {

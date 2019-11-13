@@ -6,19 +6,17 @@ import PageTitle from "../components/common/PageTitle";
 import UserDetails from "../components/user-profile-lite/UserDetails";
 import UserAccountDetails from "../components/user-profile-lite/UserAccountDetails";
 
-const Signin = () => (
+const SignUp = () => (
  
  <Container fluid className="main-content- center container px-4">
     <Row noGutters className="page-header py-4">
-      <PageTitle  md="12" className="ml-sm-auto mr-sm-auto" />
+      <PageTitle title="Signup"  md="12" className="ml-sm-auto mr-sm-auto" />
     </Row>
     <Row >
      
       <Col lg="6">
       <Card small className="mb-4">
-      <CardHeader className="border-bottom">
-        <h6 className="m-0">Signin</h6>
-      </CardHeader>
+     
       <ListGroup flush>
         <ListGroupItem className="p-3">
           <Row>
@@ -27,6 +25,28 @@ const Signin = () => (
               
                 <Row form>
                   {/* Email */}
+                  <Col md="12" className="form-group">
+                    <label htmlFor="feEmail"><b>First Name</b></label>
+                    <FormInput
+                      type="text"
+                      id="feFName"
+                      placeholder="First Name"
+                      value="Jackson"
+                      onChange={() => {}}
+                      autoComplete="Firstname"
+                    />
+                  </Col>
+                  <Col md="12" className="form-group">
+                    <label htmlFor="feEmail"><b>Last Name</b></label>
+                    <FormInput
+                      type="text"
+                      id="feLName"
+                      placeholder="Last Name"
+                      value="Wang"
+                      onChange={() => {}}
+                      autoComplete="Lastname"
+                    />
+                  </Col>
                   <Col md="12" className="form-group">
                     <label htmlFor="feEmail"><b>Email</b></label>
                     <FormInput
@@ -53,11 +73,25 @@ const Signin = () => (
                     />
                   </Col>
                 </Row>
+                  <Row>
+                  {/* Password */}
+                  <Col md="12" className="form-group">
+                    <label htmlFor="fePassword"><b>Re-Enter Password</b></label>
+                    <FormInput
+                      type="password"
+                      id="fePassword"
+                      placeholder="Password"
+                      value="EX@MPL#P@$$w0RD"
+                      onChange={() => {}}
+                      autoComplete="current-password"
+                    />
+                  </Col>
+                </Row>
                 <Row>
                 <Col md="12" style={{"fontSize":"10"}} className="form-group">
                
-                <p>  {/* eslint-disable-next-line */}{"No Account..? "}
-                 <a href="/Signup">Click here to Register Yourself</a>.</p>
+                <p>  {/* eslint-disable-next-line */}{"Already Having Account..? "}
+                 <a href="/">Click here to Sigin</a>.</p>
               
               </Col>
               </Row>
@@ -65,7 +99,7 @@ const Signin = () => (
             
               
                 <Button theme="primary" className="mb-2 mr-1">
-              Signin
+              Sign Up
               </Button>
               </Form>
             </Col>
@@ -79,4 +113,4 @@ const Signin = () => (
  
  
 );
-export default Signin;
+export default SignUp;
