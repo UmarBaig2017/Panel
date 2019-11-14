@@ -7,7 +7,8 @@ import {
   DropdownItem,
   Collapse,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from "shards-react";
 
 export default class UserActions extends React.Component {
@@ -53,7 +54,7 @@ export default class UserActions extends React.Component {
     </DropdownItem>
           <DropdownItem divider />*/}
           <DropdownItem tag={Link} to="/" className="text-danger">
-            <i className="material-icons text-danger">&#xE879;</i> Logout
+          <i onClick={this.handleLogout} className="material-icons text-danger">&#xE879;</i> Logout
           </DropdownItem>
         </Collapse>
       </NavItem>

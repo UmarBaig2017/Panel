@@ -1,12 +1,12 @@
 import React from "react";
 import { Container, Row, Col,  Card, CardHeader, CardBody , Button } from "shards-react";
 
-import PageTitle from "../components/common/PageTitle";
+import PageTitle from "../components/common/PagetitleTeacher";
 import Editor from "../components/add-new-post/Editor";
 import SidebarActions from "../components/add-new-post/SidebarActions";
 import SidebarCategories from "../components/add-new-post/SidebarCategories";
 
-const ChatsTeachers = () => (
+const ChatsStudents = () => (
   <Container fluid className="main-content-container px-4 pb-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4">
@@ -56,7 +56,7 @@ const ChatsTeachers = () => (
                   <td>Ali Altaf</td>
                   <td>12-3-2019</td>
                   <td>
-                  <Button size="sm" theme="success" className="mb-2 mr-1">
+                  <Button size="sm" theme="info" className="mb-2 mr-1">
                   Open
                 </Button>
                 </td>
@@ -70,7 +70,7 @@ const ChatsTeachers = () => (
                   <td>Clark Meagan</td>
                   <td>23-3-2019</td>
                  <td>
-                 <Button size="sm" theme="success" className="mb-2 mr-1">
+                 <Button size="sm" theme="info" className="mb-2 mr-1">
                  Open
                </Button> </td>
                 </tr>
@@ -81,7 +81,7 @@ const ChatsTeachers = () => (
                 /></td>
                   <td>Jerry</td>
                   <td>20-5-05-2019</td>
-                  <td> <Button size="sm" theme="success" className="mb-2 mr-1">
+                  <td> <Button size="sm" theme="info" className="mb-2 mr-1">
                   Open
                 </Button></td>
                  
@@ -93,7 +93,7 @@ const ChatsTeachers = () => (
                 /></td>
                   <td>Angela Liberia</td>
                   <td> 03-5-2019</td>
-                  <td> <Button size="sm" theme="success" className="mb-2 mr-1">
+                  <td> <Button size="sm" theme="info" className="mb-2 mr-1">
                   Open
                 </Button></td>
                  
@@ -113,4 +113,4 @@ const ChatsTeachers = () => (
   </Container>
 );
 
-export default ChatsTeachers;
+export default ChatsStudents;

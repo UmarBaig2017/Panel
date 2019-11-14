@@ -12,9 +12,9 @@ import {
   Button
 } from "shards-react";
 
-import PageTitle from "../components/common/PageTitle";
+import PageTitle from "../components/common/PagetitleTeacher";
 
-class BlogPosts extends React.Component {
+class Students extends React.Component {
   constructor(props) {
     super(props);
 
@@ -245,7 +245,7 @@ class BlogPosts extends React.Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Teachers"  className="text-sm-left" />
+          <PageTitle sm="4" title="Students"  className="text-sm-left" />
         </Row>
         <Row>
         {PostsListThree.map((post, idx) => (
@@ -283,7 +283,7 @@ class BlogPosts extends React.Component {
       </Row>
 
         {/* First Row of Posts*/}
-        <Row>
+       {/* <Row>
           {PostsListOne.map((post, idx) => (
             <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>
               <Card small className="card-post card-post--1">
@@ -319,10 +319,10 @@ class BlogPosts extends React.Component {
               </Card>
             </Col>
           ))}
-        </Row>
+          </Row>*/}
  
         {/* Second Row of Posts */}
-        <Row>
+      {/*  <Row>
           {PostsListTwo.map((post, idx) => (
             <Col lg="6" sm="12" className="mb-4" key={idx}>
               <Card small className="card-post card-post--aside card-post--1">
@@ -358,13 +358,13 @@ class BlogPosts extends React.Component {
               </Card>
             </Col>
           ))}
-        </Row>
+          </Row>*/}
 
         {/* Third Row of Posts */}
     
 
         {/* Fourth Row of posts */}
-        <Row>
+       {/* <Row>
           {PostsListFour.map((post, idx) => (
             <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>
               <Card small className="card-post h-100">
@@ -395,11 +395,11 @@ class BlogPosts extends React.Component {
               </Card>
             </Col>
           ))}
-        </Row>
+          </Row>*/}
       </Container>
     );
   }
 }
 
 
-export default BlogPosts;
+export default Students;

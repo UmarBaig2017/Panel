@@ -25,7 +25,7 @@ export default class Notifications extends React.Component {
           className="nav-link-icon text-center"
           onClick={this.toggleNotifications}
         >
-        <span className="d-none d-md-inline-block"><b>Switch to Teacher's Portal </b></span>
+       
         </NavLink>
         <Collapse
           open={this.state.visible}

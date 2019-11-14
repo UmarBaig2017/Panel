@@ -7,25 +7,30 @@ import {
   DropdownItem,
   Collapse,
   NavItem,
-  NavLink
+  NavLink,
+  Button
 } from "shards-react";
 
 export default class UserActions extends React.Component {
   constructor(props) {
     super(props);
-
+    
+   
     this.state = {
       visible: false
     };
-
+    this.handleLogout=this.handleLogout.bind(this)
     this.toggleUserActions = this.toggleUserActions.bind(this);
   }
-
   toggleUserActions() {
     this.setState({
       visible: !this.state.visible
     });
   }
+  handleLogout(e){
+      e.preventDefault()
+    console.log("ll")
+    }
 
   render() {
     return (
@@ -52,8 +57,8 @@ export default class UserActions extends React.Component {
             <i className="material-icons">&#xE896;</i> Transactions
     </DropdownItem>
           <DropdownItem divider />*/}
-          <DropdownItem tag={Link} to="/" className="text-danger">
-            <i className="material-icons text-danger">&#xE879;</i> Logout
+          <DropdownItem tag={Link}   to="/" className="text-danger">
+            <i onClick={this.handleLogout} className="material-icons text-danger">&#xE879;</i> Logout
           </DropdownItem>
         </Collapse>
       </NavItem>

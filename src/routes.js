@@ -7,17 +7,22 @@ import AppLayout from "./layouts/AppLayout";
 
 
 // Route Views
-import BlogOverview from "./views/BlogOverview";
-import UserProfileLite from "./views/UserProfileLite";
-import AddNewPost from "./views/ChatStudent";
+import Dashboard from "./views/DashboardStudent";
+import DashboardTeachers from "./views/DashboardTeacher";
+import StudentProfile from "./views/StudentProfile";
+import TeacherProfile from "./views/TeacherProfile";
+import ChatTeachers from "./views/ChatStudent";
+import ChatsStudents from "./views/ChatTeacher";
 import Errors from "./views/Errors";
 import ComponentsOverview from "./views/ComponentsOverview";
 import Tables from "./views/Tables";
-import BlogPosts from "./views/BlogPosts";
+import Teachers from "./views/Teachers";
+import Students from "./views/Students";
 import Signin from "./views/Signin";
 import Signup from "./views/Signup"
+// import BasicDetails from "./views/BasicDetails"
 
-import BasicDetails from "./views/BasicDetails"
+import BasicDetailsSTP from "./views/BasicDetailsSTP"
 export const notAuthenticatedRoutes = [
   { 
     exact: true,
@@ -30,40 +35,50 @@ export const notAuthenticatedRoutes = [
   },
   {
     path: "/Details",
-    component:""
+    component:BasicDetailsSTP
   }
 ];
 
-
 export default [
- 
+//  Student Panel
 
   {
     path: "/",
     exact: true,
     layout: DefaultLayout,
-    component: () => <Redirect to="/blog-overview" />
+    component: () => <Redirect to="/StudentPortal" />
   },
   {
-    path: "/blog-overview",
+    path: "/StudentPortal",
+    layout: DefaultLayout,
+    component: Dashboard
+  },
+  {
+    path: "/TeachersPortal",
     layout: AppLayout,
-    component: BlogOverview
+    component: DashboardTeachers
   },
   {
-    path: "/user-profile-lite",
+    path: "/StudentProfile",
     layout: DefaultLayout,
-    component: UserProfileLite
+    component: StudentProfile
   },
   {
-    path: "/add-new-post",
-    layout: DefaultLayout,
-    component: AddNewPost
+    path: "/TeacherProfile",
+    layout: AppLayout,
+    component: TeacherProfile
   },
   {
-    path: "/errors",
+    path: "/ChatsTeachers",
     layout: DefaultLayout,
-    component: Errors
+    component: ChatTeachers
   },
+  {
+    path: "/ChatsStudents",
+    layout: AppLayout,
+    component: ChatsStudents
+  },
+ 
   {
     path: "/components-overview",
     layout: DefaultLayout,
@@ -77,6 +92,17 @@ export default [
   {
     path: "/blog-posts",
     layout: DefaultLayout,
-    component: BlogPosts
-  }
+    component: Teachers
+  },
+  {
+    path: "/Teachers",
+    layout: DefaultLayout,
+    component: Teachers
+  },
+  {
+    path: "/Students",
+    layout: AppLayout,
+    component: Students
+  },
+  
 ];

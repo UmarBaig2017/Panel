@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, Row, Col } from "shards-react";
 
-import PageTitle from "../components/common/PageTitle";
+import PageTitle from "../components/common/PagetitleTeacher";
 import UserDetails from "../components/user-profile-lite/UserDetails";
 import UserAccountDetails from "../components/user-profile-lite/UserAccountDetails";
 
-const UserProfileLite = () => (
+const TeacherProfile = () => (
   <Container fluid className="main-content-container px-4">
     <Row noGutters className="page-header py-4">
-      <PageTitle title="User Profile" md="12" className="ml-sm-auto mr-sm-auto" />
+      <PageTitle title="Teacher Profile" md="12" className="ml-sm-auto mr-sm-auto" />
     </Row>
     <Row>
       <Col lg="4">
@@ -21,4 +21,4 @@ const UserProfileLite = () => (
   </Container>
 );
 
-export default UserProfileLite;
+export default TeacherProfile;

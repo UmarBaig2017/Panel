@@ -2,24 +2,24 @@ export default function() {
     return [
       {
         title: "Dashboard",
-        to: "/blog-overview",
+        to: "/TeachersPortal",
         htmlBefore: '<i class="material-icons">dashboard</i>',
         htmlAfter: ""
       },
       {
         title: "Students",
         htmlBefore: '<i class="material-icons">school</i>',
-        to: "/blog-posts",
+        to: "/Students",
       },
       {
         title: "Chats",
         htmlBefore: '<i class="material-icons">chat_bubble</i>',
-        to: "/add-new-post",
+        to: "/ChatsStudents",
       },
       {
         title: "Teacher Profile",
         htmlBefore: '<i class="material-icons">view_module</i>',
-        to: "/user-profile-lite",
+        to: "/TeacherProfile",
       },
       // {
       //   title: "Tables",
@@ -34,7 +34,7 @@ export default function() {
       {
         title: "Switch to Student Portal",
         htmlBefore: '<i class="material-icons">swap_horiz</i>',
-        to: "/errors",
+        to: "/StudentPortal",
       }
     ];
   }

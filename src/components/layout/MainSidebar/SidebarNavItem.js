@@ -5,16 +5,16 @@ import { NavItem, NavLink } from "shards-react";
 
 const SidebarNavItem = ({ item }) => (
   <NavItem>
-    <NavLink tag={RouteNavLink} to={item.to}>
+    <NavLink style={{"color": "green"}}  tag={RouteNavLink} to={item.to}>
       {item.htmlBefore && (
-        <div
-          className="d-inline-block item-icon-wrapper"
+        <div 
+          className="d-inline-block primary text-white"
           dangerouslySetInnerHTML={{ __html: item.htmlBefore }}
         />
       )}
       {item.title && <span>{item.title}</span>}
       {item.htmlAfter && (
-        <div
+        <div style={{"color": "red"}}
           className="d-inline-block item-icon-wrapper"
           dangerouslySetInnerHTML={{ __html: item.htmlAfter }}
         />

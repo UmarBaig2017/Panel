@@ -7,20 +7,20 @@ import { Container, Row, Col ,Card,
   ListGroupItem, Badge , CardBody } from "shards-react";
 
 
-import PageTitle from "./../components/common/PageTitle";
-import SmallStats from "./../components/common/SmallStats";
-import UsersOverview from "./../components/blog/UsersOverview";
-import UsersByDevice from "./../components/blog/UsersByDevice";
-import NewDraft from "./../components/blog/NewDraft";
-import Discussions from "./../components/blog/Discussions";
-import TopReferrals from "./../components/common/TopReferrals";
+import PageTitle from "../components/common/PageTitle";
+import SmallStats from "../components/common/SmallStats";
+import UsersOverview from "../components/blog/UsersOverview";
+import UsersByDevice from "../components/blog/UsersByDevice";
+import NewDraft from "../components/blog/NewDraft";
+import Discussions from "../components/blog/Discussions";
+import TopReferrals from "../components/common/TopReferrals";
 
-const state={}
 
-const BlogOverview = ({ smallStats , PostsListTwo , PostsListOne}) => (
+
+const Dashboard = ({ smallStats , PostsListTwo , PostsListOne}) => (
   <Container fluid className="main-content-container px-4">
     {/* Page Header */}
-    <Row noGutters className="page-header py-4">
+    <Row noGutters className="page-header py-4" >
       <PageTitle title="Dasboard"  className="text-sm-left mb-3" />
     </Row>
 
@@ -124,14 +124,14 @@ const BlogOverview = ({ smallStats , PostsListTwo , PostsListOne}) => (
   </Container>
 );
 
-BlogOverview.propTypes = {
+Dashboard.propTypes = {
   /**
    * The small stats dataset.
    */
   smallStats: PropTypes.array
 };
 
-BlogOverview.defaultProps = {
+Dashboard.defaultProps = {
   PostsListTwo: [
     {
       backgroundImage: require("../images/content-management/5.jpeg"),
@@ -178,7 +178,7 @@ BlogOverview.defaultProps = {
     {
       label: "Teachers",
       value: "230",
-      percentage: "68.7%",
+      percentage: "09.7%",
       increase: true,
       chartLabels: [null, null, null, null, null, null, null],
       attrs: { md: "6", sm: "6" },
@@ -187,8 +187,8 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(0, 184, 216, 0.1)",
-          borderColor: "rgb(0, 184, 216)",
+          backgroundColor: "rgba(102, 255, 102)",
+          borderColor: "rgb(51, 204, 51)",
           data: [1, 2, 1, 3, 5, 4, 7]
         }
       ]
@@ -205,8 +205,8 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(23,198,113,0.1)",
-          borderColor: "rgb(23,198,113)",
+          backgroundColor: "rgba(102, 255, 102)",
+          borderColor: "rgb(23,198,320)",
           data: [1, 2, 3, 3, 3, 4, 4]
         }
       ]
@@ -224,7 +224,7 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,180,0,0.1)",
+          backgroundColor: "rgba(0, 255, 153)",
           borderColor: "rgb(255,180,0)",
           data: [2, 3, 3, 3, 4, 3, 3]
         }
@@ -243,7 +243,7 @@ BlogOverview.defaultProps = {
           label: "Today",
           fill: "start",
           borderWidth: 1.5,
-          backgroundColor: "rgba(255,65,105,0.1)",
+          backgroundColor: "rgba(153, 255, 102)",
           borderColor: "rgb(255,65,105)",
           data: [1, 7, 1, 3, 1, 4, 8]
         }
@@ -254,4 +254,4 @@ BlogOverview.defaultProps = {
   ]
 };
 
-export default BlogOverview;
+export default Dashboard;
