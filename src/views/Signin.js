@@ -10,6 +10,9 @@ import * as actions from "../flux/actions"
 
 import { Dispatcher, Constants } from "../flux/index";
 
+
+import { Link } from 'react-router-dom';
+
 export default class Signin extends Component {
 constructor(props){
   super(props)
@@ -108,9 +111,12 @@ handleLogin(e) {
                   <Row>
                   <Col md="12" style={{"fontSize":"10"}} className="form-group">
                  
-                  <p>  {/* eslint-disable-next-line */}{"No Account..? "}
-                   <a href="/Signup">Click here to Register Yourself</a>.</p>
-                
+                  <p>
+                    No Account..{" "}
+                    <Link to="/Signup">
+                      Click here to Register Yourself
+                    </Link>
+                  </p>
                 </Col>
                 </Row>
                  

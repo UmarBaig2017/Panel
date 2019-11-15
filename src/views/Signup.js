@@ -6,6 +6,9 @@ import PageTitle from "../components/common/PagetitleTeacher";
 import UserDetails from "../components/user-profile-lite/UserDetails";
 import UserAccountDetails from "../components/user-profile-lite/UserAccountDetails";
 
+
+import { Link } from 'react-router-dom';
+
 let firebaseConfig = {
   apiKey: "AIzaSyDjeHbUQRGkuFGKZu1WX67CATwEBud4vIs",
   authDomain: "students-teachers-portal.firebaseapp.com",
@@ -127,8 +130,9 @@ else{
              <Row>
              <Col md="12" style={{"fontSize":"10"}} className="form-group">
             
-             <p>  {/* eslint-disable-next-line */}{"Already Having Account..? "}
-              <a href="/">Click here to Sigin</a>.</p>
+             <p>Already Having Account..?{" "}
+              <Link to="/">Click here to Sigin</Link>
+            </p>
            
            </Col>
            </Row>
