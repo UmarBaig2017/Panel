@@ -14,11 +14,12 @@ import UsersByDevice from "../components/blog/UsersByDevice";
 import NewDraft from "../components/blog/NewDraft";
 import Discussions from "../components/blog/Discussions";
 import TopReferrals from "../components/common/TopReferrals";
+import Store from '../flux/store'
 
 
-
-const Dashboard = ({ smallStats , PostsListTwo , PostsListOne}) => (
-  <Container fluid className="main-content-container px-4">
+const Dashboard = ({ smallStats , PostsListTwo , PostsListOne}) =>{
+  console.log(Store.getloginstatus())
+ return <Container fluid className="main-content-container px-4">
     {/* Page Header */}
     <Row noGutters className="page-header py-4" >
       <PageTitle title="Dasboard"  className="text-sm-left mb-3" />
@@ -122,7 +123,7 @@ const Dashboard = ({ smallStats , PostsListTwo , PostsListOne}) => (
 
     
   </Container>
-);
+};
 
 Dashboard.propTypes = {
   /**

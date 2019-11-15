@@ -12,6 +12,7 @@ let _store = {
   navItemsTeacher: getSidebarNavItemsTeacher(),
   loginSatus: false
 
+
 };
 
 class Store extends EventEmitter {
@@ -19,25 +20,21 @@ class Store extends EventEmitter {
     super();
   
     
+    this.togglelogin = this.togglelogin.bind(this);
     this.updateAuth = this.updateAuth.bind(this);
     this.registerToActions = this.registerToActions.bind(this);
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.getloginstatus = this.getloginstatus.bind(this)
     Dispatcher.register(this.registerToActions.bind(this));
-    Dispatcher.register(this.registerToSpacific.bind(this));
-  }
-  registerToSpacific({actionType,payload}){
-    switch(actionType){
-      case "LOGIN":
-        this.updateAuth()
-      }
-    }
 
+  }
+  
   registerToActions({ actionType, payload }) {
     switch (actionType) {
       case Constants.TOGGLE_SIDEBAR:
         this.toggleSidebar();
-        
+       case Constants.TOGGLE_SiINGNIN:
+      this.togglelogin()
         break;
       default:
     }
@@ -51,6 +48,10 @@ class Store extends EventEmitter {
   getloginstatus(){
     return _store.loginSatus
     
+  }
+  togglelogin() {
+    _store.loginSatus = !_store.loginSatus;
+    this.emit(Constants.TOGGLE_SiINGNIN);
   }
 
 

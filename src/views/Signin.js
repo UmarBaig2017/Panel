@@ -8,6 +8,7 @@ import UserAccountDetails from "../components/user-profile-lite/UserAccountDetai
 import firebase from "firebase"
 import * as actions from "../flux/actions"
 
+import { Dispatcher, Constants } from "../flux/index";
 
 export default class Signin extends Component {
 constructor(props){
@@ -18,7 +19,13 @@ constructor(props){
   }
   this.onChange= this.onChange.bind(this)
   this.handleLogin= this.handleLogin.bind(this)
+  this.handleloginStatus= this.handleloginStatus.bind(this)
 
+}
+handleloginStatus() {
+  Dispatcher.dispatch({
+    actionType: Constants.TOGGLE_SiINGNIN
+  });
 }
 onChange(e){
    this.setState({
@@ -34,8 +41,9 @@ handleLogin(e) {
   .signInWithEmailAndPassword(this.state.Email, this.state.Password)
   .then(res => {
     let yes= true
-   localStorage.setItem('myData', yes );
-   this.props.history.push("/Details")
+  //  localStorage.setItem('myData', yes );
+   this.handleloginStatus()
+   this.props.history.push("/StudentPortal")
    
   }).catch(err => {
       alert(err)

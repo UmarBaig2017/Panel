@@ -13,20 +13,15 @@ class App extends Component {
     super(props);
     this.state = { isAuth: Store.getloginstatus() };
   }
- 
- componentWillMount() {
-  
-    this.setState({
-      isAuth: Store.getloginstatus() 
-    })
- 
- }
+  componentDidMount(){
+    console.log(Store.getloginstatus())
+  }
   
   render() {
     return (
       <Router basename={process.env.REACT_APP_BASENAME || ""}>
         <div>
-          {!this.state.isAuth &&
+          {!Store.getloginstatus() &&
             notAuthenticatedRoutes.map((route, index) => {
               return (
                 <React.Fragment key={index}>
@@ -34,7 +29,7 @@ class App extends Component {
                 </React.Fragment>
               );
             })}
-          {this.state.isAuth &&
+          {Store.getloginstatus() &&
             routes.map((route, index) => {
               return (
                 <Route

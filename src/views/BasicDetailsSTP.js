@@ -3,6 +3,8 @@ import {
     Container, Row, Col, Card, CardHeader, ListGroup, Button,
     ListGroupItem, Form, FormInput, FormSelect
 } from "shards-react";
+import Store from "../flux/store"
+
 import MultiSelectReact from 'multi-select-react';
 import PageTitle from "../components/common/PageTitle";
 export default class BasicDetailsSTP extends Component {
@@ -30,6 +32,10 @@ export default class BasicDetailsSTP extends Component {
         this.selectedBadgeClicked = this.selectedBadgeClicked.bind(this)
 
     }
+    componentDidMount(){
+        console.log(Store.getloginstatus())
+      }
+      
     onChange(e) {
         this.setState({
             [e.target.name]: e.target.value
