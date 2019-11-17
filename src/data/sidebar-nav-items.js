@@ -1,9 +1,9 @@
 export default function() {
   return [
     {
-      title: "Dashboard",
+      title: "Create Post",
       to: "/StudentPortal",
-      htmlBefore: '<i class="material-icons">dashboard</i>',
+      htmlBefore: '<i class="material-icons">post_add</i>',
       htmlAfter: ""
     },
     {
