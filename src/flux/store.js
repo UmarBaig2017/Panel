@@ -10,8 +10,7 @@ let _store = {
   menuVisible: false,
   navItems: getSidebarNavItems(),
   navItemsTeacher: getSidebarNavItemsTeacher(),
-  loginSatus: false,
-  loginEmail:""
+  loginSatus: false
 
 
 };
@@ -21,8 +20,6 @@ class Store extends EventEmitter {
     super();
   
     
-    this.changeEmail = this.changeEmail.bind(this);
-    this.getloginEmail = this.getloginEmail.bind(this);
     this.togglelogin = this.togglelogin.bind(this);
     this.updateAuth = this.updateAuth.bind(this);
     this.registerToActions = this.registerToActions.bind(this);
@@ -38,9 +35,6 @@ class Store extends EventEmitter {
         this.toggleSidebar();
        case Constants.TOGGLE_SiINGNIN:
       this.togglelogin()
-       case Constants.SETEMAIL:
-       this.changeEmail()
-
         break;
       default:
     }
@@ -50,15 +44,9 @@ class Store extends EventEmitter {
     _store.loginSatus = true;
     this.emit("change")
   }
-  changeEmail(){
-_store.loginEmail = "Umar"
-  }
+
   getloginstatus(){
     return _store.loginSatus
-    
-  }
-  getloginEmail(){
-    return _store.loginEmail
     
   }
   togglelogin() {

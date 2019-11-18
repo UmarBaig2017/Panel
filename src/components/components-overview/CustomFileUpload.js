@@ -6,7 +6,7 @@ const CustomFileUpload = () => (
     <label className="custom-file-label" htmlFor="customFile2">
       Choose file...
     </label>
-  </div>  
+  </div>
 );
 
 export default CustomFileUpload;

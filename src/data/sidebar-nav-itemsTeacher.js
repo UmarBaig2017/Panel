@@ -1,15 +1,19 @@
 export default function() {
     return [
       {
-        title: "Posts",
+        title: "Dashboard",
         to: "/TeachersPortal",
-        htmlBefore: '<i class="material-icons">mode_comment</i>',
+        htmlBefore: '<i class="material-icons">dashboard</i>',
         htmlAfter: ""
       },
-   
+      {
+        title: "Students",
+        htmlBefore: '<i class="material-icons">school</i>',
+        to: "/Students",
+      },
       {
         title: "Chats",
-        htmlBefore: '<i class="material-icons">chat</i>',
+        htmlBefore: '<i class="material-icons">chat_bubble</i>',
         to: "/ChatsStudents",
       },
       {

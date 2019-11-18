@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row, Col, Card,CardHeader ,ListGroup,Button,
-  ListGroupItem,Form,FormInput, FormSelect} from "shards-react";
+  ListGroupItem,Form,FormInput,} from "shards-react";
   import firebase from "firebase"
 import PageTitle from "../components/common/PagetitleTeacher";
 import UserDetails from "../components/user-profile-lite/UserDetails";
@@ -10,18 +10,16 @@ import UserAccountDetails from "../components/user-profile-lite/UserAccountDetai
 import { Link } from 'react-router-dom';
 
 let firebaseConfig = {
-  apiKey: "AIzaSyDtPnKZmVs_ZvC0eMEaxmmId7aw0NpUDRI",
-  authDomain: "student-teacher-portal.firebaseapp.com",
-  databaseURL: "https://student-teacher-portal.firebaseio.com",
-  projectId: "student-teacher-portal",
-  storageBucket: "student-teacher-portal.appspot.com",
-  messagingSenderId: "927975138372",
-  appId: "1:927975138372:web:75ba185088f2d6ce73c811",
-  measurementId: "G-CZ9QWGZ14L"
+  apiKey: "AIzaSyDjeHbUQRGkuFGKZu1WX67CATwEBud4vIs",
+  authDomain: "students-teachers-portal.firebaseapp.com",
+  databaseURL: "https://students-teachers-portal.firebaseio.com",
+  projectId: "students-teachers-portal",
+  storageBucket: "students-teachers-portal.appspot.com",
+  messagingSenderId: "706172600266",
+  appId: "1:706172600266:web:5eee0bed8e03bce3da5933"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
+firebase.initializeApp(firebaseConfig);
 
 export default class Signup extends Component {
   constructor(props){
@@ -29,8 +27,7 @@ export default class Signup extends Component {
     this.state={
       Email: "",
       Password: "",
-      Repass: "",
-      Usertype: ""
+      Repass: ""
     }
     this.onChange= this.onChange.bind(this)
   this.handleSignup= this.handleSignup.bind(this)
@@ -38,8 +35,6 @@ export default class Signup extends Component {
 onChange(e){
     this.setState({
        [e.target.name]: e.target.value
-     },()=>{
-       console.log(this.state)
      });
 }
 
@@ -52,6 +47,7 @@ if(this.state.Password===this.state.Repass){
           .then(() => {
             console.log("success")
            this.props.history.push("/")
+                
           })
           .catch(e => {
               let err = e.message;
@@ -131,19 +127,6 @@ else{
                  />
                </Col>
              </Row>
-             <Row>
-             {/* Password */}
-             <Col md="12" className="form-group">
-               <label htmlFor="fePassword"><b>Signup type</b></label>
-               <FormSelect  value={this.state.Usertype} onChange={this.onChange} id="feInputState">
-               <option >Select Type</option>
-               <option value="Student">Student</option>
-               <option value="Teacher">Teachers</option>
-               </FormSelect>
-             
-             </Col>
-           </Row>
-
              <Row>
              <Col md="12" style={{"fontSize":"10"}} className="form-group">
             
