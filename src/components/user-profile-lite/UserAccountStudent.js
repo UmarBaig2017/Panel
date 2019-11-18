@@ -96,7 +96,8 @@ const UserAccountDetails = ({ title }) => (
           </InputGroup>
           </Col>
 
-            
+          
+        
             </Row>
               <Row form>
                 {/* City */}

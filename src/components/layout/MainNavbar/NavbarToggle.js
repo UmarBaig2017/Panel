@@ -14,6 +14,7 @@ class NavbarToggle extends React.Component {
       actionType: Constants.TOGGLE_SIDEBAR
     });
   }
+ 
 
   render() {
     return (
